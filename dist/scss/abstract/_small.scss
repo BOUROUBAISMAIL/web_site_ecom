@@ -1,0 +1,30 @@
+// HomePage Banner
+.banner {
+    position: relative;
+    &__right,
+    &__left {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 1;
+            pointer-events: none;
+            @include transitionmd;
+        }
+        &:hover::before {
+            box-shadow: 0 0 0 15px rgb(0, 0, 0, 0.1) inset;
+        }
+    }
+}
+
+// HomePage Top Brand
+.topbrand__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(197px, 1fr));
+    gap: 1rem;
+}

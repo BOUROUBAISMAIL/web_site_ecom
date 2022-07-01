@@ -1,0 +1,66 @@
+.account {
+    &__wrapper {
+        max-width: 63rem;
+        margin: 5rem auto;
+        @media (max-width: 767px) {
+            margin: 1.5rem auto;
+        }
+    }
+    &__menu {
+        &.active a {
+            color: $primary-color;
+            font-weight: bold;
+        }
+    }
+    &__items {
+        margin: 0 -5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    &__item {
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 40px 20px;
+        text-align: center;
+        margin: 6px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05);
+        @include transitionsm;
+
+        &:hover {
+            border: 1px solid $primary-color;
+        }
+
+        span {
+            color: $bg;
+            font-weight: 600;
+            i {
+                width: 2.5rem;
+                height: 2.5rem;
+                @include flexcenter;
+                margin: 0 auto;
+                background: #dbeefd;
+                border-radius: 23px;
+                color: $primary-color;
+            }
+        }
+    }
+    &__title {
+        legend {
+            color: $bg;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 70px;
+                margin-top: 0.5rem;
+                height: 3px;
+                background: $primary-color;
+            }
+        }
+    }
+}

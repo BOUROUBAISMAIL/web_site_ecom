@@ -1,0 +1,24 @@
+.profile {
+    &__form {
+        border-bottom: 1px solid $smoke;
+        &--label {
+            color: $secondary-color;
+            font-weight: normal;
+            font-size: 0.9rem;
+        }
+        &--input {
+            border: 1px solid $smoke;
+            padding: 6px 1rem;
+            color: $bg;
+            font-size: 0.8rem;
+        }
+        &--btn-back {
+            background-color: $secondary-color;
+            width: 5rem;
+        }
+        &--btn-update {
+            background-color: $primary-color;
+            width: 7.8rem;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.orderhistory {
+    &__item {
+        border-radius: 7px;
+        border: 1px solid $smoke;
+        &--header {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid $smoke;
+            @media (max-width: 767px) {
+                padding: 0.7rem 1rem;
+            }
+        }
+        &--bottom {
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media (max-width: 767px) {
+                padding: 0.7rem 1rem;
+
+                flex-direction: column;
+            }
+            img {
+                width: 4.5rem;
+                margin-right: 1rem;
+            }
+            .button {
+                background-color: $primary-color;
+                @include hoverbtncolor;
+                width: 4rem;
+            }
+        }
+    }
+}

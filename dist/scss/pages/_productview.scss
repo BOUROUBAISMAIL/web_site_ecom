@@ -1,0 +1,274 @@
+.productview {
+    &__right {
+        border: 1px solid $smoke;
+    }
+    &__photo {
+        &--main {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &--small {
+            overflow: hidden;
+            a {
+                &:not(:last-child) {
+                    margin-right: 0.75rem;
+                }
+                border: 1px solid $smoke;
+            }
+            img {
+                &.active {
+                    border-bottom: 2px solid $primary-color;
+                }
+                @include transitionsm;
+                &:hover {
+                    transform: scale(1.1);
+                    border: 1px solid $primary-color;
+                }
+            }
+        }
+    }
+    &__info {
+        padding: 0.5rem 1rem;
+        @media (max-width: 767px) {
+            padding: 0.5rem;
+        }
+        .productview__name {
+            h2 {
+                color: $bg;
+                font-weight: 600;
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                margin-bottom: 0.75rem;
+            }
+        }
+        .productview__tags {
+            span {
+                font-size: 0.875rem;
+                color: $bg;
+                background: #3749bb0d;
+                padding: 3px 7px;
+                border-radius: 13px;
+                strong {
+                    padding-left: 3px;
+                }
+            }
+        }
+        .productview__desc {
+            ul {
+                padding-left: 1rem;
+                li {
+                    list-style: disc;
+                    color: $bg;
+                    font-weight: 400;
+                    font-size: 0.775rem;
+                    margin-bottom: 0.4rem;
+                }
+            }
+        }
+
+        .productview__cart--btn {
+            background-color: $primary-color;
+            @include hoverbtncolor;
+            @media (max-width: 767px) {
+                width: auto;
+            }
+        }
+        .productview__wishlist--btn {
+            background-color: #14a753;
+            @include hoverbtncolor;
+            @media (max-width: 767px) {
+                width: auto;
+            }
+        }
+
+        .productview__color {
+            label {
+                color: $bg;
+            }
+            select {
+                background-color: #fff;
+                padding: 5px 12px;
+                appearance: none;
+                border-radius: 3px;
+                margin-left: 0.75rem;
+                color: $bg;
+                border: 1px solid $smoke;
+
+                /* inline SVG */
+                background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A');
+                background-position: right 10px center;
+                background-repeat: no-repeat;
+                background-size: auto 45%;
+                width: 10rem;
+                // disable default appearance
+                outline: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                &::-ms-expand {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__facilitys {
+        padding: 0.6875rem 0.6125rem;
+        .productview__facility {
+            padding: 1rem 0.1rem;
+            cursor: pointer;
+            @include transitionsm;
+            &:hover {
+                box-shadow: 0 1px 17px rgba($color: #000000, $alpha: 0.16);
+            }
+            span {
+                background: $primary-color;
+                color: white;
+                width: 4rem;
+                height: 3rem;
+                @include flexcenter;
+                border-radius: 50%;
+                line-height: 3rem;
+            }
+            h4 {
+                padding-left: 0.75rem;
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 600;
+                color: $bg;
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        label {
+            color: $bg;
+            margin-right: 2rem;
+        }
+        span {
+            color: $secondary-color;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    .productviewinfo {
+        &__nav {
+            ul {
+                display: flex;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid $smoke;
+                li {
+                    margin-right: 2rem;
+                    position: relative;
+                    @media (max-width: 767px) {
+                        margin-right: 1rem;
+                    }
+                    a {
+                        font-weight: 600;
+                        color: $bg;
+                        font-size: 1rem;
+                    }
+                    &::after {
+                        content: '';
+                        height: 2px;
+                        background-color: $primary-color;
+                        width: 0%;
+                        display: block;
+                        position: absolute;
+                        bottom: -17px;
+                        left: 0;
+                        @include transitionlg;
+                    }
+                    &:hover {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        &__specif {
+            &--head {
+                padding: 0 1rem;
+                margin-bottom: 1rem;
+                background-color: rgba(55, 73, 187, 0.05);
+                @media (max-width: 767px) {
+                    padding: 0rem;
+                }
+                h2 {
+                    color: $primary-color;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    padding: 0.7rem 0;
+                    @media (max-width: 767px) {
+                        font-size: 0.975rem;
+                        padding: 0.4rem 0;
+                    }
+                }
+            }
+            &--wrap {
+                padding: 0.2rem 1rem;
+                @media (max-width: 767px) {
+                    padding: 0.2rem 0rem;
+                }
+            }
+            &--item {
+                padding: 0 1rem;
+                display: flex;
+                padding-bottom: 8px;
+                margin-bottom: 8px;
+                border-bottom: 1px solid $smoke;
+                @media (max-width: 767px) {
+                    padding: 0rem;
+                }
+                h2 {
+                    color: #696868;
+                    font-size: 1rem;
+                    @media (max-width: 767px) {
+                        font-size: 0.9rem;
+                    }
+                }
+                p {
+                    color: $bg;
+                    font-weight: normal;
+                    font-size: 0.9rem;
+                    @media (max-width: 767px) {
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+        }
+        &__review--form {
+            padding-left: 1rem;
+            @media (max-width: 767px) {
+                padding-left: 0rem;
+                margin-bottom: 1rem;
+            }
+            label {
+                color: $bg;
+                font-weight: 600;
+                font-size: 1rem;
+                @media (max-width: 767px) {
+                    font-size: 0.83rem;
+                }
+            }
+            textarea,
+            input {
+                padding: 6px 1rem;
+                border-radius: 5px;
+                border: 1px solid $smoke;
+                margin-left: 10px;
+                color: $bg;
+            }
+            .button {
+                background-color: $primary-color;
+                &:hover {
+                    background-color: $bg;
+                }
+            }
+        }
+    }
+}

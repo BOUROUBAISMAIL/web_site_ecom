@@ -1,0 +1,24 @@
+.product-panel {
+    // Product Panel Title
+    &__title {
+        h2 {
+            position: relative;
+            &::after {
+                content: '';
+                background-color: $primary-color;
+                width: 130px;
+                height: 2px;
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+            }
+        }
+    }
+    // Product Items
+    .product__items-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+}

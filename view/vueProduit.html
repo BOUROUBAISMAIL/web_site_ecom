@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue du produit</title>
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <!-- icone -->
+    <link href="../css/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="../css/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/boxicons.min.css" rel="stylesheet">
+    <!-- Tailwind Css -->
+    <link rel="stylesheet" href="../dist/css/tailwind.css" />
+    <link rel="stylesheet" href="../dist/css/index.css" />
+   
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Main Css -->
+    
+    <link rel="stylesheet" href="../css/projet.css" />
+    
+    <script src="js/jquery.store.js"></script>
+<body>
+
+<!-- Navigation Bar -->
+<header class="fixed-top">
+    <div class="container-fluid row ">
+
+        <div class="col-md-8">
+            <nav id="navbar" class="navbar ">
+                <ul>
+
+                    <li><a href="#about">About us </a></li>
+                    <li><a href="#portfolio">Articles </a></li>
+                    <li><a href="#contactus">contact us</a></li>
+                    <li><a href="connexion.html">login</a></li>
+
+
+
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-4">
+            <div class="input-group" id="ser">
+                <input type="text" class="form-control" placeholder="Search for products">
+                <div class="input-group-append">
+                    <span class="input-group-text bg-transparent text-primary">
+
+                        <button type="submit"><i class="fa fa-search" style="margin:0"></i></button>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    
+
+</header>
+<!--end of nav-->
+
+<!--  ******** Breadcrumb START ******** -->
+<div class="container px-2 py-6 mx-auto breadcrumb-wrapper">
+    <ol class="breadcrumbs breadcrumbs--one">
+        <li>
+            <a class="breadcrumb" href="../index.html">
+                <span itemprop="name">
+                    <i class="pr-1 fas fa-home"></i>
+                    <span>Acceuil</span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="breadcrumb" href="#">
+                <span itemprop="name">
+                    <i class="pr-1 fas fa-anchor fa-sm"></i>
+                    <span>Produit</span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <span class="breadcrumb">
+                <span itemprop="name">Vue Produit</span>
+            </span>
+        </li>
+    </ol>
+</div>
+<!-- ******** Breadcrumb END ******** -->
+
+
+
+
+            <!-- ******** Product View  Start ******** -->
+            <main class="my-8 productview">
+                <div class="container px-2 mx-auto">
+                    <div class="flex flex-col md:flex-row productview__wrapper">
+                        <!-- Left Side-->
+                        <div class="flex flex-col w-full md:w-10/12 productview__left">
+                            <!-- Product Information -->
+                            <div class="flex flex-col md:flex-row">
+                                <div class="w-full mb-4 md:w-5/12 productview__photo md:mb-0">
+                                    <!-- Product Main Photo -->
+                                    <div class="productview__photo--main">
+                                        <picture class="">
+                                            <a href="#">
+                                                <img
+                                                    src="../img/produi.jpg" />
+                                            </a>
+                                        </picture>
+                                    </div>
+                                    <!-- Product SMall Photo -->
+                                    <div class="productview__photo--small">
+                                        <picture class="flex justify-center">
+                                            <a href="#">
+                                                <img class="w-28 active" src="../img/produi.jpg" />
+                                            </a>
+                                            <a href="#">
+                                                <img class="w-28" src="../img/produi.jpg" />
+                                            </a>
+                                            <a href="#">
+                                                <img class="w-28" src="../img/produi.jpg" />
+                                            </a>
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-7/12 productview__info">
+                                    <div class="productview__name">
+                                        <!-- Product Category -->
+                                        <a href="#" class="inline-block mb-3 text-sm text-gray-600">Vase</a>
+                                        <!-- Product Name -->
+                                        <h2>
+                                            Vase Ceramique traditionnel
+                                        </h2>
+                                    </div>
+                                    <!-- Product Ratings -->
+                                    <div class="mb-3 product__ratings">
+                                        <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                        <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                        <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                        <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                        <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                        <a href="#" class="pl-2 text-sm text-gray-500">( <i class="pr-1 fas fa-pen-nib fa-xs"></i>
+                                           ajouter un avis
+                                            )</a>
+                                    </div>
+                                    <!-- Product Info -->
+                                    <div class="mb-6 productview__tags">
+                                        <span>Status:
+                                            <strong class="text-green-600">En Stock</strong></span>
+                                        <span>Brand: <strong class="text-blue-550">TRADI</strong></span>
+                                        <span>Model: <strong>FLEURIE</strong></span>
+                                    </div>
+                                    <!-- Product Desc -->
+                                    <div class="mb-7 productview__desc">
+                                        <ul>
+                                            <li>
+                                                <h4>Fais main</h4>
+                                            </li>
+                                            <li>
+                                                <h4>100% marocain</h4>
+                                            </li>
+                                            <li>
+                                                <h4>Couleur Maron</h4>
+                                            </li>
+                                            <li>
+                                                <h4>non utilise</h4>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Product Color -->
+                                    <div class="mb-5 productview__color">
+                                        <label for="">Color: </label>
+                                        <select name="" id="">
+                                            <option value="">Marron</option>
+                                            <option value="">Blanc</option>
+                                            <option value="">gris</option>
+                                            <option value="">rouge</option>
+                                            <option value="">Bleu ciel</option>
+                                        </select>
+                                    </div>
+                                    <!-- Product size -->
+                                    <div class="mb-5 productview__color">
+                                        <label for="">Taille: </label>
+                                        <select name="" id="">
+                                            <option value="">10 cm</option>
+                                            <option value="">14 cm</option>
+                                            <option value="">20 cm</option>
+                                            <option value="">50 cm</option>
+                                            <option value="">70cm</option>
+                                        </select>
+                                    </div>
+                                    <!-- PRODUCT PRICE -->
+                                    <div class="mb-6 productview__price">
+                                        <h2 class="text-3xl font-semibold text-gray-800">2,450 MAD</h2>
+                                    </div>
+                                    <!-- Qty and cart btn -->
+                                    <div class="flex productview__cart">
+                                        <div class="mr-3 qty-input">
+                                            <button class="qty-count qty-count--minus" data-action="minus" type="button">
+                                                -
+                                            </button>
+                                            <input class="product-qty" type="number" name="product-qty" min="0" max="10"
+                                                value="1" />
+                                            <button class="qty-count qty-count--add" data-action="add" type="button">
+                                                +
+                                            </button>
+                                        </div>
+                                        <a href="#" class="w-40 mr-3 button productview__cart--btn"><i
+                                                class="pr-1 fas fa-cart-arrow-down"></i> AJOUTER AU PANIER</a>
+            
+                                        <a href="#" class="bg-green-500 w-36 button productview__wishlist--btn"><i
+                                                class="pr-1 far fa-heart"></i>
+                                            <span class="hidden md:inline">AJOUTER A LA WISHLIST</span></a>
+                                    </div>
+                                    <!-- Social Share -->
+                                    <div class="my-6 productview__social">
+                                        <label for="">Partager Ce Post: </label>
+                                        <div class="">
+                                            <a href="#" title="Facebook">
+                                                <span><i class="fab fa-xs fa-facebook-f"></i></span>
+                                            </a>
+                                            <a href="#" title="whatsapp">
+                                                <span><i class="fab fa-xs fa-whatsapp"></i></span>
+                                            </a>
+                                            <a href="#" title="twitter">
+                                                <span><i class="fab fa-xs fa-twitter"></i></span>
+                                            </a>
+                                            <a href="#" title="youtube">
+                                                <span><i class="fab fa-xs fa-youtube"></i></span>
+                                            </a>
+                                            <a href="#" title="linkedin">
+                                                <span><i class="fab fa-xs fa-linkedin-in"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Desc & Reviews -->
+                            <div class="mt-6 mb-8 md:mt-20 productviewinfo">
+                                <!--Product Nav -->
+                                <div class="productviewinfo__nav">
+                                    <ul>
+                                        <li>
+                                            <a href="#productviewinfo__specification">Specification</a>
+                                        </li>
+                                        <li><a href="#productviewinfo__description">Description</a></li>
+                                        <li><a href="#productviewinfo__reviews">Avis (2)</a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="p-1 md:p-5 productviewinfo__wrapper">
+                                    <!-- Product Specification -->
+                                    <div class="productviewinfo__specification" id="productviewinfo__specification">
+                                        <div>
+                                            <h2 class="mb-2 text-lg font-semibold text-gray-900  md:text-2xl md:mb-6">
+                                                Specification
+                                            </h2>
+                                        </div>
+                                        <div class="productviewinfo__specif">
+                                            <div class="productviewinfo__specif--wrap">
+                                                <div class="productviewinfo__specif--head">
+                                                    <h2>Information Basic</h2>
+                                                </div>
+                                                <div class="productviewinfo__specif--items">
+                                                    <div class="productviewinfo__specif--item">
+                                                        <h2 class="w-3/12 md:w-1/5">Etat</h2>
+            
+                                                        <p class="w-9/12 md:w-4/5">
+                                                            remis a neuf
+                                                        </p>
+                                                    </div>
+                                                    <div class="productviewinfo__specif--item">
+                                                        <h2 class="w-3/12 md:w-1/5">Materiel</h2>
+            
+                                                        <p class="w-9/12 md:w-4/5">
+                                                            Ceramique
+                                                        </p>
+                                                    </div>
+                                                    <div class="productviewinfo__specif--item">
+                                                        <h2 class="w-3/12 md:w-1/5">Taille</h2>
+            
+                                                        <p class="w-9/12 md:w-4/5">
+                                                            50 cm /70 
+                                                        </p>
+                                                    </div>
+                                                    <div class="productviewinfo__specif--item">
+                                                        <h2 class="w-3/12 md:w-1/5">
+                                                            Made In
+                                                        </h2>
+            
+                                                        <p class="w-9/12 md:w-4/5">Morocco</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="productviewinfo__specif--wrap">
+                                                <div class="productviewinfo__specif--head">
+                                                    <h2>LIVRAISON</h2>
+                                                </div>
+                                                <div class="productviewinfo__specif--items">
+                                                    <div class="productviewinfo__specif--item">
+                                                        <h2 class="w-3/12 md:w-1/5">Information</h2>
+            
+                                                        <p class="w-9/12 md:w-4/5">
+                                                           
+                                                            --desc--
+                                                        </p>
+                                                    </div>
+                                                    <div class="productviewinfo__specif--item">
+                                                        <h2 class="w-3/12 md:w-1/5">Date</h2>
+            
+                                                        <p class="w-9/12 md:w-4/5">Livre entre le %%% et %%%</p>
+                                                    </div>
+                                                    <div class="productviewinfo__specif--item">
+                                                        <h2 class="w-3/12 md:w-1/5">Couleur</h2>
+            
+                                                        <p class="w-9/12 md:w-4/5">
+                                                           Marron
+                                                        </p>
+                                                    </div>
+                                                    <div class="productviewinfo__specif--item">
+                                                        <h2 class="w-3/12 md:w-1/5">Garantie</h2>
+            
+                                                        <p class="w-9/12 md:w-4/5">
+                                                            1 an
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Product Description -->
+                                    <div class="mt-6 productviewinfo__description" id="productviewinfo__description">
+                                        <div>
+                                            <h2 class="mb-3 text-lg font-semibold text-gray-900  md:mb-6 md:text-xl">
+                                                Description
+                                            </h2>
+                                        </div>
+                                        <div class="productviewinfo__specif">
+                                            <div class="productviewinfo__desc--wrap">
+                                                <div class="productviewinfo__specif--head">
+                                                    <h2>
+                                                        Vase Ceramique traditionnel
+                                                    </h2>
+                                                </div>
+                                                <div class="productviewinfo__desc">
+                                                    <p class="px-1 leading-7 text-gray-800 md:px-4">
+                                                                ---
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Product Review -->
+                                    <div class="mt-6 productviewinfo__reviews" id="productviewinfo__reviews">
+                                        <div>
+                                            <h2 class="mb-4 text-lg font-semibold text-gray-900  md:mb-6 md:text-xl">
+                                                Avis (2)
+                                            </h2>
+                                        </div>
+                                        <div class="productviewinfo__review">
+                                            <div class="flex flex-col-reverse  md:flex-row productviewinfo__review--wrap">
+                                                <div class="w-full  md:w-3/5 productviewinfo__review--items">
+                                                    <div class="mb-5 productviewinfo__review--item">
+                                                        <div class="product__ratings">
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                        </div>
+                                                        <p class="mb-2 text-base text-gray-800">
+                                                            ---
+                                                        </p>
+                                                        <div class="flex items-center">
+                                                            <strong class="text-gray-800">John Doe</strong>
+                                                            <p class="text-sm text-gray-600">
+                                                                &nbsp; - April 3, 2022
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-5 productviewinfo__review--item">
+                                                        <div class="product__ratings">
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                        </div>
+                                                        <p class="mb-2 text-base text-gray-800">
+                                                                ---
+                                                        </p>
+                                                        <div class="flex items-center">
+                                                            <strong class="text-gray-800">John Doe</strong>
+                                                            <p class="text-sm text-gray-600">
+                                                                &nbsp; - April 3, 2022
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full  md:w-2/5 productviewinfo__review--form">
+                                                    <div class="flex mb-4">
+                                                        <label for="" class="w-1/4">votre avis</label>
+                                                        <div class="w-3/4 product__ratings">
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                            <span class="color-yellow"><i class="fa fa-star"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex mb-4">
+                                                        <label class="w-1/4" for="">Nom</label>
+                                                        <input type="text" class="w-3/4" />
+                                                    </div>
+                                                    <div class="flex mb-4">
+                                                        <label class="w-1/4" for="">Votre Avis</label> 
+                                                       <textarea name="" id="" cols="30" rows="5"></textarea>
+                                                    </div>
+                                                    <div class="flex mb-4">
+                                                        <label class="w-1/4" for="">Email</label>
+                                                        <input type="text" class="w-3/4" />
+                                                    </div>
+                                                    <div class="flex mb-4">
+                                                        <label class="w-1/4" for=""></label>
+                                                        <a href="#" class="w-3/4 ml-2 button">Ajouter un Avis</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- RIght Side -->
+                        <div class="w-full md:w-2/12 productview__right">
+                            <div class="productview__facilitys">
+                                <div class="flex items-center productview__facility">
+                                    <span><i class="fas fa-truck"></i></span>
+                                    <h4>LIVRAISON NATIONALE</h4>
+                                </div>
+                                <div class="flex items-center productview__facility">
+                                    <span><i class="fas fa-exchange-alt"></i></span>
+                                    <h4>     GARANTIE DE PRIX</h4>
+                                </div>
+                                <div class="flex items-center productview__facility">
+                                    <span><i class="fas fa-undo-alt"></i></span>
+                                    <h4> RENVOIE GRATUIT</h4>
+                                </div>
+                                <div class="flex items-center productview__facility">
+                                    <span><i class="far fa-handshake"></i></span>
+                                    <h4>Methode de paiement</h4>
+                                </div>
+                                <!-- Cat head -->
+                            </div>
+                            <h3 class="px-3 py-3 text-sm font-semibold tracking-wide text-center text-white bg-gray-800 ">
+                                PRODUIT DE MEME CATEGORIE
+                            </h3>
+                            <!-- Products -->
+                            <div class="px-1 py-3 productview__products">
+                                <div class="px-2 py-1 border border-gray-200 productview__product">
+                                    <picture>
+                                        <img src="../img/c1.jpg"
+                                            class="w-full" alt="" />
+                                    </picture>
+                                    <div class="flex flex-col">
+                                        <a href="#" class="mb-2 text-sm font-semibold text-gray-800 uppercase">
+                                            Oriental shoe, Khanjar
+                                        </a>
+                                        <h3 class="mb-2 text-sm font-semibold text-gray-700">2,450 MAD</h3>
+                                    </div>
+                                </div>
+            
+                                <div class="px-2 py-1 border border-gray-200 productview__product">
+                                    <picture>
+                                        <img src="../img/c2.jpg"
+                                            class="w-full" alt="" />
+                                    </picture>
+                                    <div class="flex flex-col">
+                                        <a href="#" class="mb-2 text-sm font-semibold text-gray-800 uppercase">
+                                            Single pointed slipper
+                                        </a>
+                                        <h3 class="mb-2 text-sm font-semibold text-gray-700">2,450 MAD</h3>
+                                    </div>
+                                </div>
+            
+                                <div class="px-2 py-1 border border-gray-200 productview__product">
+                                    <picture>
+                                        <img src="../img/c3.jpg"
+                                            class="w-full" alt="" />
+                                    </picture>
+                                    <div class="flex flex-col">
+                                        <a href="#" class="mb-2 text-sm font-semibold text-gray-800 uppercase">
+                                            Single round Slipper
+
+                                        </a>
+                                        <h3 class="mb-2 text-sm font-semibold text-gray-700">2,450 MAD</h3>
+                                    </div>
+                                </div>
+            
+                                <div class="px-2 py-1 border border-gray-200 productview__product">
+                                    <picture>
+                                        <img src="../img/c1.jpg"
+                                            class="w-full" alt="" />
+                                    </picture>
+                                    <div class="flex flex-col">
+                                        <a href="#" class="mb-2 text-sm font-semibold text-gray-800 uppercase">
+                                            Single round Slipper
+                                        </a>
+                                        <h3 class="mb-2 text-sm font-semibold text-gray-700">2,450 MAD</h3>
+                                    </div>
+                                </div>
+            
+                                <div class="px-2 py-1 border border-gray-200 productview__product">
+                                    <picture>
+                                        <img src="../img/c2.jpg"
+                                            class="w-full" alt="" />
+                                    </picture>
+                                    <div class="flex flex-col">
+                                        <a href="#" class="mb-2 text-sm font-semibold text-gray-800 uppercase">
+                                            Single pointed slipper
+                                        </a>
+                                        <h3 class="mb-2 text-sm font-semibold text-gray-700">2,450 MAD</h3>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-1 border border-gray-200 productview__product">
+                                    <picture>
+                                        <img src="../img/c3.jpg" class="w-full" alt="" />
+                                    </picture>
+                                    <div class="flex flex-col">
+                                        <a href="#" class="mb-2 text-sm font-semibold text-gray-800 uppercase">
+                                            Single pointed slipper
+                                        </a>
+                                        <h3 class="mb-2 text-sm font-semibold text-gray-700">2,450 MAD</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ******** Product View  END ******** -->
+
+
+
+<footer>
+    <div class="container d-md-flex py-4">
+
+        <div class="me-md-auto text-center text-md-start">
+            <div class="copyright">
+                &copy; Copyright <strong><span>EHTP</span></strong>. All Rights Reserved
+            </div>
+
+        </div>
+        <div class="social-links text-center text-md-right  ">
+            <div class="social" id="azr">
+                <a href="#" title="Facebook">
+                    <span><i class="fab fa-2x fa-facebook-f"></i></span>
+                </a>
+                <a href="#" title="whatsapp">
+                    <span><i class="fab fa-2x fa-whatsapp"></i></span>
+                </a>
+                <a href="#" title="twitter">
+                    <span><i class="fab fa-2x fa-twitter"></i></span>
+                </a>
+                <a href="#" title="youtube">
+                    <span><i class="fab fa-2x fa-youtube"></i></span>
+                </a>
+                <a href="#" title="linkedin">
+                    <span><i class="fab fa-2x fa-linkedin-in"></i></span>
+                </a>
+
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+
+
+
+            <!-- jQuery -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+                integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+                crossorigin="anonymous"></script>
+</body>
+</html>

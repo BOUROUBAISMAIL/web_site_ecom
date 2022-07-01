@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <title>Inscription</title>
+    <link href="../css/connexion.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="connexion" id="connexion">
+        <div class="client">
+            
+            <form action="../controller/controllerConnexion.php?action=ConnexionClient" method="POST">
+                
+                <h1>Connexion Client</h1>
+                <input type="email" name="email" required autofocus placeholder="Email">
+                <input type="password" name="password" placeholder="Mot de passe">
+               
+                <button type="submit">Connexion</button>
+               
+            </form>
+
+        </div> 
+        
+        <div class="artisan">
+           
+            <form action="../controller/controllerConnexion.php?action=ConnexionArtisan" method="POST">
+                <h1>Connexion Artisan</h1>
+                <input type="email" name="email" required autofocus placeholder="Email">
+               
+                <input type="password" name="password" placeholder="Mot de passe">
+                
+              
+                <button type="submit">Connexion</button>
+            </form>
+        </div>
+
+        <div class="choix">
+		<div class="CH">
+			
+			<div class="choix-artisan-gauche">
+				<h1>Vous êtes un artisan ?</h1>
+				<p>Inscrivez-vous ici!</p>
+				<button class="Conn" id="connArtisan">Connexion</button>
+			</div>
+            <div class="choix-client-droite">
+				<h1>Vous êtes un client ?</h1>
+				<p>Inscrivez-vous ici! </p>
+				<button class="Conn" id="connClient">Connexion</button>
+			</div>
+		</div>
+	</div>
+    </div>
+    <div>
+        <p>Vous n'avez pas encore inscrit ? <a href="inscription.html">inscrivez-vous</a></p>
+    </div>
+
+
+    <footer>
+        <div class="copyright">
+            &copy; Copyright <strong><span>EHTP</span></strong>. All Rights Reserved
+          </div>
+    </footer>
+    <script>
+    const clientButton = document.getElementById('connClient');
+    const ArtisanButton = document.getElementById('connArtisan');
+    const connexion = document.getElementById('connexion');
+
+    clientButton.addEventListener('click', () => {
+        connexion.classList.add("move");
+    });
+
+    ArtisanButton.addEventListener('click', () => {
+        connexion.classList.remove("move");
+    });
+
+
+
+    </script>
+
+</body>
+</html>

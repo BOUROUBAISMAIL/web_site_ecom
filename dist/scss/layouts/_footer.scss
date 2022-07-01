@@ -1,0 +1,131 @@
+.footer {
+    &__container {
+        display: flex;
+        .footer__info {
+            width: 33%;
+            padding-right: 0.5125rem;
+            article {
+                color: $lightgray;
+                p {
+                    font-size: 0.9em;
+                    line-height: 1.5rem;
+                }
+            }
+            @media (max-width: 767px) {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            &--social {
+                ul {
+                    display: flex;
+                    li {
+                        a {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            background: #14a753;
+                            color: white;
+                            margin-right: 1.25rem;
+                            border-radius: 5px;
+                            @include flexcenter;
+                            @include transitionmd;
+
+                            &.footer__facebook {
+                                background-color: #448ccb;
+                            }
+                            &.footer__twitter {
+                                background-color: #00bff3;
+                            }
+                            &.footer__instagram {
+                                background-color: #f85858;
+                            }
+                            &.footer__youtube {
+                                background-color: #d02d2d;
+                            }
+                            &.footer__linkedin {
+                                background-color: $primary-color;
+                            }
+                            &:hover {
+                                background: $secondary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer__linkup {
+            width: 67%;
+            @media (max-width: 767px) {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            &--items {
+                margin-bottom: 2.25rem;
+                display: flex;
+                @media (max-width: 767px) {
+                    flex-wrap: wrap;
+                }
+            }
+            &--item {
+                h6 {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: $secondary-color;
+                }
+                li {
+                    padding-bottom: 1rem;
+                    @include transitionsm;
+
+                    a {
+                        color: $lightgray;
+                        font-size: 0.9em;
+                        @include transitionsm;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                    &:hover {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+
+            &--category {
+                &-wrap {
+                    display: flex;
+                    padding-bottom: 0.3rem;
+                    p {
+                        padding-right: 1rem;
+                        color: $secondary-color;
+                    }
+                    ul {
+                        display: flex;
+                        @media (max-width: 767px) {
+                            flex-wrap: wrap;
+                        }
+                        li {
+                            padding-right: 1rem;
+
+                            a {
+                                color: $lightgray;
+                                font-size: 0.9em;
+                                @include transitionsm;
+
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        p {
+            color: $secondary-color;
+            font-size: 0.9em;
+        }
+    }
+}

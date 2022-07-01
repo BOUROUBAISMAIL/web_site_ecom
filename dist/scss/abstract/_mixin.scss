@@ -1,0 +1,115 @@
+// Breakpoints
+@media (min-width: 104em) {
+}
+
+//*? 64em = 640px
+//*? 102.4em = 1024px
+//*? 140em = 1400px
+
+$breakpoints-up: (
+    'medium': '640px',
+    'large': '1024px',
+    'xlarge': '1400px',
+);
+
+// *? 63.9em = 639px
+// *? 102.3em = 1023px
+// *? 139em = 1399px
+$breakpoints-down: (
+    'small': '639px',
+    'medium': '1023px',
+    'large': '1399px',
+);
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size )) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size )) {
+        @content;
+    }
+}
+
+@mixin transitionsm {
+    transition: all 220ms ease-in-out;
+}
+
+@mixin transitionmd {
+    transition: all 320ms ease-in-out;
+}
+@mixin transitionlg {
+    transition: all 420ms ease-in-out;
+}
+@mixin flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin imgEffectBefore {
+    content: '';
+    background: rgba(255, 255, 255, 0.41) none repeat scroll 0 0;
+    height: 0;
+    left: 0;
+    margin: auto;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: 0;
+    pointer-events: none;
+}
+@mixin imgEffectBeforeHover {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition-duration: 1.3s;
+    transition-duration: 1.3s;
+}
+
+@mixin imgEffectAfter {
+    content: '';
+    background: rgba(255, 255, 255, 0.41) none repeat scroll 0 0;
+    bottom: 0;
+    height: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    width: 0;
+    pointer-events: none;
+}
+@mixin imgEffectAfterHover {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition-duration: 1.3s;
+    transition-duration: 1.3s;
+}
+
+@mixin imgEffect {
+    &::before {
+        @include imgEffectBefore;
+    }
+    &:hover::before {
+        @include imgEffectBeforeHover;
+    }
+    &::after {
+        @include imgEffectAfter;
+    }
+    &:hover::after {
+        @include imgEffectAfterHover;
+    }
+}
+
+@mixin hoverbtn {
+    box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.5);
+}
+
+@mixin hoverbtncolor {
+    &:hover {
+        background-color: $bg;
+        color: #fff;
+    }
+}

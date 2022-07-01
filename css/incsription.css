@@ -1,0 +1,207 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+  *{
+	  box-sizing: border-box;
+  }
+  
+  body{
+  
+	  background: white;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  flex-direction: column;
+	  font-family: 'Inter', sans-serif;
+	  height: 100vh;
+	  margin: 20px 20px 50px;
+  }
+  
+  h1 {
+	  font-weight: bold;
+	  margin-top: 5px;
+	  margin-bottom: 10px;
+	  text-align: center;
+  }
+  
+  
+  p{
+	  font-size: 14px;
+	  font-weight: 100;
+	  line-height: 20px;
+	  margin: 20px 0 30px;
+  }
+  
+  
+  
+  button {
+	  border-radius: 20px;
+	  border: 1px solid rgb(14, 100, 66);
+	  background-color:rgb(41, 136, 103);
+	  color: #144737;
+	  font-size: 12px;
+	  font-weight: bold;
+	  padding: 12px 40px;
+	  margin-top: 12px;
+	  text-transform: uppercase;
+	  transition: transform 80ms ease-in;
+  }
+  
+  button:active {
+	  transform: scale(0.95);
+  }
+  
+  button:focus {
+	  outline: none;
+  }
+  
+  button.inscr {
+	  background-color: transparent;
+	  border-color: #FFFFFF;
+  }
+  
+  form{
+	  background-color: #FFFFFF;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  flex-direction: column;
+	  padding: 0 50px;
+	  height: 100%;
+	  text-align: center;
+  }
+  
+  input{
+	  background-color: rgba(238, 238, 238, 0.671);
+	  border: none;
+	  padding: 12px 12px;
+	  margin: 6px 0;
+	  width: 100%;
+  }
+  
+  .inscription{
+	  background-color: #fff;
+	  border-radius: 10px;
+		box-shadow: 0 14px 28px rgba(185, 242, 211, 0.719), 
+			  0 10px 10px rgba(141, 229, 188, 0.764);
+	  position: relative;
+	  overflow: hidden;
+	  margin-top: 100px;
+	  padding-top: 40px;
+	  width: 900px;
+	  max-width: 100%;
+	  min-height: 600px;
+  }
+  
+  .client,.artisan{
+	  position: absolute;
+	  top: 0;
+	  height: 100%;
+	  transition: all 0.6s ease-in-out;
+  }
+  
+  .artisan{
+	  left: 0;
+	  width: 50%;
+	  z-index: 2;
+  }
+  
+  .inscription.move .artisan{
+	  transform: translateX(100%);
+  }
+  
+  .client{
+	  left: 0;
+	  width: 50%;
+	  opacity: 0;
+	  z-index: 1;
+  }
+  
+  .inscription.move .client{
+	  transform: translateX(100%);
+	  opacity: 1;
+	  z-index: 5;
+	  animation: show 0.6s;
+  }
+  
+  @keyframes show {
+	  0%, 49.99% {
+		  opacity: 0;
+		  z-index: 1;
+	  }
+	  
+	  50%, 100% {
+		  opacity: 1;
+		  z-index: 5;
+	  }
+  }
+  
+  .choix{
+	  position: absolute;
+	  top: 0;
+	  left: 50%;
+	  width: 50%;
+	  height: 100%;
+	  overflow: hidden;
+	  transition: transform 0.6s ease-in-out;
+	  z-index: 100;
+  }
+  
+  .inscription.move .choix{
+	  transform: translateX(-100%);
+  }
+  
+  .CH{
+	  background: #1b683b;
+	  background: -webkit-linear-gradient(to right, #227d57, #2a8d53);
+	  background: linear-gradient(to right, #227d57, #2a8d53);
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  background-position: 0 0;
+	  color: #FFFFFF;
+	  position: relative;
+	  left: -100%;
+	  height: 100%;
+	  width: 200%;
+		transform: translateX(0);
+	  transition: transform 0.6s ease-in-out;
+  }
+  
+  .inscription.move .CH {
+		transform: translateX(50%);
+  }
+  
+  .choix-artisan-gauche,.choix-client-droite{
+	  position: absolute;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  flex-direction: column;
+	  padding: 0 40px;
+	  text-align: center;
+	  top: 0;
+	  height: 100%;
+	  width: 50%;
+	  transform: translateX(0);
+	  transition: transform 0.6s ease-in-out;
+  }
+  
+  .choix-artisan-gauche{
+	  transform: translateX(-20%);
+  }
+  
+  .inscription.move .choix-artisan-gauche {
+	  transform: translateX(0);
+  }
+  
+  .choix-client-droite {
+	  right: 0;
+	  transform: translateX(0);
+  }
+  
+  .inscription.move .choix-client-droite {
+	  transform: translateX(20%);
+  }
+  
+  
+  

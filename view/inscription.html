@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <title>Inscription</title>
+    <link href="../css/incsription.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="inscription" id="inscription">
+        <div class="client">
+            
+            <form action="../controller/controllerInscription.php?action=InscriptionClient" method="POST">
+                
+                <h1>Inscription Client</h1>
+                <input type="email" name="email" required autofocus placeholder="Email">
+                <input type="text" name="prenom" autofocus placeholder="Prénom"> 
+                <input type="text" name="nom" autofocus placeholder="Nom">
+                <input type="tel" name="tel" placeholder="Téléphone">
+                <input type="text" name="adresse" placeholder="Adresse">
+                <input type="text" name="ville" placeholder="Ville">
+                <input type="number" name="codePostal" placeholder="Code Postal">
+                <input type="password" name="password" placeholder="Mot de passe">
+               
+                <button type="submit">Inscription</button>
+               
+            </form>
+
+        </div> 
+        
+        <div class="artisan">
+           
+            <form action="../controller/controllerInscription.php?action=InscriptionArtisan" method="POST">
+                <h1>Inscription Artisan</h1>
+                <input type="email" name="email" required autofocus placeholder="Email">
+                <input type="text" name="prenom" autofocus placeholder="Prénom"> 
+                <input type="text" name="nom" autofocus placeholder="Nom">
+                <input type="text" name="metier" placeholder="Métier">
+                <input type="tel" name="tel" placeholder="Téléphone">
+                <input type="text" name="adresse" placeholder="Adresse">
+                <input type="text" name="ville" placeholder="Ville">
+                <input type="number" name="codePostal" placeholder="Code Postal">
+                <input type="password" name="password" placeholder="Mot de passe">
+                
+              
+                <button type="submit">Inscription</button>
+            </form>
+        </div>
+
+        <div class="choix">
+		<div class="CH">
+			
+			<div class="choix-artisan-gauche">
+				<h1>Vous êtes un artisan ?</h1>
+				<p>Inscrivez-vous ici!</p>
+				<button class="inscr" id="inscrArtisan">inscription</button>
+			</div>
+            <div class="choix-client-droite">
+				<h1>Vous êtes un client ?</h1>
+				<p>Inscrivez-vous ici! </p>
+				<button class="inscr" id="inscrClient">inscription</button>
+			</div>
+		</div>
+	</div>
+    </div>
+    <div class="Connex">
+        <p>Vous avez déjà un compte ? <a href="connexion.html">Connectez-vous</a></p>
+    </div>
+    <footer>
+        <div class="copyright">
+            &copy; Copyright <strong><span>EHTP</span></strong>. All Rights Reserved
+          </div>
+    </footer>
+    <script>
+    const clientButton = document.getElementById('inscrClient');
+    const ArtisanButton = document.getElementById('inscrArtisan');
+    const inscription = document.getElementById('inscription');
+
+    clientButton.addEventListener('click', () => {
+        inscription.classList.add("move");
+    });
+
+    ArtisanButton.addEventListener('click', () => {
+        inscription.classList.remove("move");
+    });
+
+
+
+    </script>
+</body>
+</html>

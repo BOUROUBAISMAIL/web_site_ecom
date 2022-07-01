@@ -1,0 +1,24 @@
+.invoice {
+    max-width: 49.625rem;
+    margin: 6rem auto;
+    background-color: #fff;
+
+    &__dateno {
+        &--no {
+            background: #005dab;
+            color: white;
+            border-radius: 0px 23px 0px 0;
+        }
+        &--date {
+            text-align: right;
+        }
+    }
+
+    &__footer {
+        h4 {
+            background: #005dab;
+            color: white;
+            border-radius: 0px 23px 0px 0;
+        }
+    }
+}

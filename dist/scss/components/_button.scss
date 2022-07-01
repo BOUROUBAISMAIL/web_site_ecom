@@ -1,0 +1,17 @@
+.button {
+    @include flexcenter;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border-radius: 2px;
+
+    &:hover {
+        background-color: $bg;
+        color: #fff;
+    }
+}

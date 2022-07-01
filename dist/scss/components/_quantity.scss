@@ -1,0 +1,102 @@
+$black: #000;
+$white: #fff;
+
+$disable: #f2f2f2;
+
+.qty-input {
+    color: $bg;
+    background: $white;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid $smoke;
+    width: fit-content;
+
+    .product-qty,
+    .qty-count {
+        background: transparent;
+        color: inherit;
+        font-weight: semibold;
+        font-size: inherit;
+        border: none;
+        display: inline-block;
+        min-width: 0;
+        height: 2.5rem;
+        line-height: 1;
+
+        @media (max-width: 767px) {
+            height: 2rem;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .product-qty {
+        width: 50px;
+
+        @media (max-width: 767px) {
+            width: auto;
+        }
+        min-width: 0;
+        display: inline-block;
+        text-align: center;
+        appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            appearance: none;
+            margin: 0;
+        }
+    }
+
+    .qty-count {
+        padding: 0;
+        cursor: pointer;
+        width: 2.5rem;
+        font-size: 1.25em;
+        text-indent: -100px;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: 767px) {
+            width: 1.5rem;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            height: 2px;
+            width: 10px;
+            position: absolute;
+            display: block;
+            background: $bg;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        &--minus {
+            border-right: 1px solid $smoke;
+        }
+        &--add {
+            border-left: 1px solid $smoke;
+            &:after {
+                transform: rotate(90deg);
+            }
+        }
+
+        &:disabled {
+            color: $gray;
+            background: $disable;
+            cursor: not-allowed;
+            border-color: transparent;
+
+            &:before,
+            &:after {
+                background: $gray;
+            }
+        }
+    }
+}

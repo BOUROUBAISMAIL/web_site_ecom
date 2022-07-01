@@ -1,0 +1,15 @@
+.upcoming {
+    .product__items-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        gap: 1rem;
+    }
+
+    &__banner--bottom,
+    &__banner--right {
+        position: relative;
+        &_wrapper {
+            @include imgEffect;
+        }
+    }
+}

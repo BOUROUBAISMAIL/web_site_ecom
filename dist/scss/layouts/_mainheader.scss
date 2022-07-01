@@ -1,0 +1,59 @@
+.header {
+    &-main {
+        &__logo {
+            .fa-bars {
+                color: $secondary-color;
+            }
+        }
+        &__search {
+            form {
+                position: relative;
+                input {
+                    border: 2px solid $primary-color;
+                    border-radius: 23px;
+                    outline: none;
+                    height: 2.375rem;
+                    width: 100%;
+                    color: $secondary-color;
+                    padding: 4px 1.25rem;
+                }
+            }
+            &--btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: $primary-color;
+                color: white;
+                border-radius: 0 23px 23px 0;
+                height: 100%;
+                @include flexcenter;
+                width: 4rem;
+                cursor: pointer;
+                @include transitionsm;
+
+                &:hover {
+                    background: linear-gradient(to right, $primary-color, $secondary-color);
+                }
+
+                &:active {
+                    background: $primary-color;
+                }
+            }
+        }
+        &__icons {
+            &-container {
+                ul {
+                    li {
+                        padding: 0 0.925rem;
+                        color: $secondary-color;
+                        a {
+                            .fas {
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

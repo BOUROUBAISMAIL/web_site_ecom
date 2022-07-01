@@ -1,0 +1,25 @@
+.productlist {
+    &__sidebar {
+        border: 1px solid $smoke;
+        padding: 6px;
+        &--head {
+            h2 {
+                text-transform: uppercase;
+                font-weight: 600;
+                background-color: $smoke;
+                color: $secondary-color;
+                font-size: 0.85rem;
+                padding: 8px;
+                margin-bottom: 0.625rem;
+                margin-top: 0.825rem;
+            }
+        }
+    }
+    &--title {
+        h2 {
+            &::after {
+                background-color: #fff !important;
+            }
+        }
+    }
+}

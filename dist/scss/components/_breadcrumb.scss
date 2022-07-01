@@ -1,0 +1,91 @@
+/* SCSS variables */
+$app-brand-one: $primary-color;
+$app-brand-two: darken($app-brand-one, 5%);
+$app-brand-inverse: mix($app-brand-one, white, 5%);
+$app-border-radius: 4px;
+$spacer: 1rem;
+
+$breadcrumb-border: $primary-color;
+
+.breadcrumb-wrapper {
+    display: grid;
+    grid-gap: $spacer * 2;
+}
+
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-size: 0.9rem;
+    background-color: white;
+    overflow: hidden;
+    li {
+        display: contents;
+        .breadcrumb,
+        [itemprop='name'] {
+            display: flex;
+            align-items: center;
+        }
+        .breadcrumb {
+            position: relative;
+            color: #5a5f65eb;
+            outline: none;
+        }
+        a.breadcrumb {
+            text-decoration: none;
+        }
+    }
+}
+
+/* First variation */
+.breadcrumbs.breadcrumbs--one {
+    padding: 0 0 0 $spacer;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    li {
+        .breadcrumb {
+            position: relative;
+            margin-left: -$spacer;
+            margin-right: $spacer;
+        }
+        [itemprop='name'] {
+            padding: 0.1rem 0.5rem 0.1em 2rem;
+            @media (max-width: 767px) {
+                padding: 0.1rem 0.5rem 0.1em 1rem;
+            }
+        }
+        a.breadcrumb {
+            text-decoration: none;
+            background: linear-gradient(to right, white 0%, $app-brand-inverse 50%);
+            &:hover,
+            &:focus {
+                &,
+                &::after {
+                    background: $app-brand-one;
+                    color: $app-brand-inverse;
+                }
+            }
+            &::after {
+                $breadcrumb-arrow-size: $spacer * 1.5;
+                content: '';
+                display: block;
+                width: $breadcrumb-arrow-size;
+                height: $breadcrumb-arrow-size;
+                z-index: 1;
+                margin-right: -$breadcrumb-arrow-size/2;
+                background-color: $app-brand-inverse;
+                border: 2px solid $breadcrumb-border;
+                transform: rotate(45deg) skew(15deg, 15deg);
+                transform-origin: center;
+                clip-path: polygon(100% 0, 0 0, 100% 100%);
+                border-radius: 0 4px 0 0;
+            }
+        }
+        &:first-child {
+            [itemprop='name'] {
+                padding-left: $spacer * 1.5;
+            }
+        }
+    }
+}

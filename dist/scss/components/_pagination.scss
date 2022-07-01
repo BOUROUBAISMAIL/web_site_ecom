@@ -1,0 +1,93 @@
+.pagination {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagination a {
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #333;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s linear;
+}
+
+.pagination a:hover {
+    color: #eb4d4b;
+}
+
+.bar {
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #eb4d4b;
+    bottom: 0;
+    left: -100px;
+    transition: 0.4s linear;
+}
+
+.pagination a:nth-child(1):hover ~ .bar {
+    left: 0;
+}
+
+.pagination a:nth-child(2):hover ~ .bar {
+    left: 50px;
+}
+
+.pagination a:nth-child(3):hover ~ .bar {
+    left: 100px;
+}
+
+.pagination a:nth-child(4):hover ~ .bar {
+    left: 150px;
+}
+
+.pagination a:nth-child(5):hover ~ .bar {
+    left: 200px;
+}
+
+.pagination a:nth-child(6):hover ~ .bar {
+    left: 250px;
+}
+
+.pagination a:nth-child(7):hover ~ .bar {
+    left: 300px;
+}
+.pagination a:nth-child(8):hover ~ .bar {
+    left: 350px;
+}
+
+// Select Box
+
+.select__selectbox {
+    position: relative;
+}
+
+.select__selectbox::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    right: 0.7rem;
+    width: 0;
+    height: 0;
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+.select__selectbox select {
+    border: 1px solid #eee;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    display: flex;
+    background-color: white;
+    outline: 0;
+    cursor: pointer;
+    appearance: none;
+}

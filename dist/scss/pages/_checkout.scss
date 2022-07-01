@@ -1,0 +1,215 @@
+.checkout {
+    .checkout__subtotal {
+        margin-left: 15px;
+        padding: 1rem;
+        border: 1px solid $smoke;
+        border-radius: 6px;
+        border-top: 5px solid $primary-color;
+        @media (max-width: 767px) {
+            margin-left: 0px;
+            margin-top: 1rem;
+        }
+
+        &--item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $smoke;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            p {
+                color: $secondary-color;
+                font-weight: 600;
+                font-size: 1rem;
+            }
+            h3 {
+                color: $bg;
+                font-weight: 600;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.checkout__info {
+    padding: 2rem 1rem;
+    border: 1px solid $smoke;
+    border-radius: 6px;
+    @media (max-width: 767px) {
+        padding: 2rem 0.5rem;
+    }
+}
+
+%titleIcon {
+    width: 32px;
+    height: 32px;
+    background-color: $primary-color;
+    color: white;
+    border-radius: 50%;
+    @include flexcenter;
+}
+%titleTxt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 0.8rem;
+}
+%checkoutspace {
+    padding-left: 2.75rem;
+    padding-top: 1rem;
+    @media (max-width: 767px) {
+        padding-left: 0.1rem;
+    }
+}
+
+.checkout__deliver {
+    &--title {
+        display: flex;
+        &_icon {
+            @extend %titleIcon;
+        }
+        &_txt {
+            @extend %titleTxt;
+        }
+    }
+
+    &--address {
+        @extend %checkoutspace;
+    }
+    &--items {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        column-gap: 1rem;
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            row-gap: 1rem;
+        }
+    }
+    &--item {
+        border: 1px solid $smoke;
+        border-radius: 6px;
+        padding: 1rem;
+
+        &.active {
+            border-color: #14a753;
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 1.3rem;
+            padding-bottom: 6px;
+            color: $bg;
+        }
+        p {
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: $secondary-color;
+        }
+    }
+}
+
+.checkout__product {
+    &--title {
+        display: flex;
+        &_icon {
+            @extend %titleIcon;
+        }
+        &_txt {
+            @extend %titleTxt;
+        }
+    }
+
+    &--products {
+        @extend %checkoutspace;
+    }
+
+    &--item {
+        display: flex;
+        margin: 10px 0;
+        h2.checkout__product--name {
+            color: $bg;
+            font-weight: 400;
+            font-size: 1rem;
+            padding-bottom: 4px;
+        }
+        h4 {
+            color: $secondary-color;
+            font-weight: 400;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+        }
+        h3 {
+            color: $secondary-color;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+    }
+    &--info {
+        padding-left: 10px;
+    }
+}
+
+.checkout__payment {
+    &--title {
+        display: flex;
+        &_icon {
+            @extend %titleIcon;
+        }
+        &_txt {
+            @extend %titleTxt;
+        }
+    }
+
+    &--payments {
+        @extend %checkoutspace;
+    }
+    &--items {
+        ul {
+            display: flex;
+            @media (max-width: 767px) {
+                flex-wrap: wrap;
+            }
+            li {
+                margin-right: 2rem;
+                font-weight: 600;
+                font-size: 1rem;
+                label {
+                    color: $secondary-color;
+                }
+                input {
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+
+    &--box {
+        margin-top: 1rem;
+        margin-left: 2.75rem;
+        border-radius: 7px;
+        border: 1px solid #14a753;
+        @media (max-width: 767px) {
+            margin-left: 0rem;
+        }
+        &__wrapper {
+            padding: 1rem 0.5rem;
+        }
+
+        &__item {
+            padding-left: 0.5rem;
+            label {
+                color: $bg;
+                font-size: 14.4px;
+                padding-right: 0.2rem;
+                font-weight: 600;
+            }
+            input {
+                padding: 6px 1rem;
+                border: 1px solid $smoke;
+                border-radius: 23px;
+                color: $secondary-color;
+            }
+        }
+    }
+}

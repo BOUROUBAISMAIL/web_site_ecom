@@ -1,0 +1,39 @@
+.terms__item {
+    margin-bottom: 2.2rem;
+    &--header {
+        font-size: 20px;
+        margin-bottom: 0.275rem;
+        padding-bottom: 0.275rem;
+        border-bottom: 1px solid $primary-color;
+    }
+    &--desc {
+        margin-bottom: 1rem;
+        font-size: 16px;
+        color: #01132d;
+        line-height: 26px;
+    }
+}
+
+.privacy__item {
+    &--desc {
+        display: flex;
+        align-items: c;
+    }
+    margin-bottom: 2rem;
+    h2 {
+        font-size: 1rem;
+        color: $bg;
+        font-weight: 600;
+        margin-bottom: 0.7rem;
+        text-transform: uppercase;
+    }
+    p {
+        color: $bg;
+        font-size: 0.93rem;
+        line-height: 1.675rem;
+        margin-bottom: 0.7rem;
+        span {
+            color: $bg;
+        }
+    }
+}

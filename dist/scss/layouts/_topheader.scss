@@ -1,0 +1,46 @@
+.header {
+    &__top {
+        border-bottom: 1px solid #e8e8e8;
+        font-size: 0.8em;
+        color: $lightgray;
+        a {
+            @include transitionsm;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        &-right {
+            ul {
+                display: flex;
+                li {
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+                        padding-right: 1rem;
+                        border-right: 1px solid $lightgray;
+                    }
+                    &:hover ul {
+                        display: block;
+                    }
+                    ul {
+                        display: none;
+                        position: absolute;
+                        width: 6.375rem;
+                        padding: 10px 0;
+                        background: #fff;
+                        box-shadow: 0 4px 12px rgba($color: #000000, $alpha: 0.5);
+                        border-radius: 6px;
+                        z-index: 2;
+                        @include transitionlg;
+                        li {
+                            padding: 0.4rem 0.6rem;
+                            border-right: none !important;
+                            a {
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

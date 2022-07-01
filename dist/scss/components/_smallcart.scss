@@ -1,0 +1,50 @@
+.shopping-bag-sidebar {
+    position: fixed;
+    z-index: 200 !important;
+    top: 90%;
+    right: 1%;
+    width: 62px;
+    transform: translateY(-50%);
+}
+.small_cart-container {
+    background: lighten($primary-color, $amount: 0);
+    cursor: pointer;
+    border-radius: 4px;
+    &:hover {
+        background-color: $bg;
+    }
+}
+.small_bag {
+    cursor: pointer;
+    color: white;
+    margin: 0.5rem 0 0.275rem 0;
+    padding: 3px 6px;
+}
+.small_cart_counter {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background: $bg;
+    color: #fff;
+    line-height: 18px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    @media (max-width: 767px) {
+        right: -4px;
+        top: -6px;
+    }
+}
+.small_cart_btn {
+    background: $primary-color;
+    border-radius: 2px;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    @include hoverbtncolor;
+}

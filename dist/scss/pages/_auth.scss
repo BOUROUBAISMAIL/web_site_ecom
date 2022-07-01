@@ -1,0 +1,60 @@
+.auth {
+    padding: 5rem 0;
+    @media (max-width: 767px) {
+        padding: 2rem 0;
+    }
+    &__wrapper {
+        max-width: 63.9375rem;
+        margin: 0 auto;
+    }
+
+    &__left {
+        border-radius: 10px 0 0 10px;
+    }
+    &__right {
+        border-radius: 0px 10px 10px 0px;
+    }
+    &__form {
+        label.auth__label {
+            color: $secondary-color;
+            font-size: 0.8rem;
+            font-weight: normal;
+            padding-bottom: 0.25rem;
+        }
+        i {
+            position: absolute;
+            color: $smoke;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        input.auth__input {
+            padding: 0.625rem 1rem;
+            padding-left: 2rem;
+            border: 1px solid $smoke;
+            border-radius: 6px;
+            width: 100%;
+            color: $secondary-color;
+
+            &:focus i.far {
+                color: $primary-color;
+            }
+        }
+    }
+    &__btn {
+        background-color: $primary-color;
+        border-radius: 7px;
+        color: white;
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.8rem 0.7rem;
+        text-align: center;
+        width: 100%;
+        @include transitionsm;
+        &:hover {
+            letter-spacing: 1px;
+            color: #fff;
+        }
+    }
+}
